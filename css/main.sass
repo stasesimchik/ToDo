@@ -1,0 +1,71 @@
+.header
+  display: flex
+  &__button
+    background-color: #fff
+    border: none
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &:hover .hover-item
+      background-color: rgb(85, 132, 255)
+.burger-btn
+  &__line
+    display: block
+    width: 30px
+    height: 3px
+    background-color: black
+    margin: 3px
+.filter-btn
+  &__line
+    display: block
+    width: 30px
+    height: 3px
+    background-color: black
+    margin: 3px
+    &:nth-child(2)
+      width: 20px
+    &:last-child
+      width: 5px
+.sort-btn
+  width: 48px
+  height: 29px
+  &:hover &__item
+    color: rgb(85, 132, 255)
+  &__item
+    font-size: 14px
+    font-weight: bold
+.view-btn
+  width: 48px
+  height: 29px
+  flex-direction: row
+  flex-wrap: wrap
+  &__item
+    display: block
+    width: 8px
+    height: 5px
+    margin: 2px
+    background-color: black
+    &_long
+      width: 20px
+.add-btn
+  border: none
+  border-radius: 50px
+  background-color: rgb(85, 132, 255)
+  &:hover
+    background-color: darken(rgb(85, 132, 255), 10)
+  &__text
+    color: #fff
+    margin: 5px 15px
+.edit-btn
+  border: none
+  background-color: #fff
+  &:hover &__item
+    background-color: black
+  &__item
+    display: block
+    width: 3px
+    margin: 2px
+    height: 3px
+    border-radius: 5px
+    background-color: gray
