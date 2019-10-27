@@ -1,5 +1,46 @@
+*
+  box-sizing: border-box
+body
+  margin: 0 auto
+  padding: 0
+  font-family: 'Roboto Condensed', sans-serif
+.main
+  width: 1200px
+  display: flex
+.main__sidebar
+  flex-basis: 20%
+  height: 1000px
+  background-color: rgb(14, 26, 53)
+  display: none
+.sidebar
+  &__header
+    max-height: 69px
+    padding: 11px
+    text-align: center
+  &__title
+    font-size: 40px
+    color: #fff
+.menu-sidebar
+  &__list
+    list-style: none
+    padding: 0px
+  &__item
+    color: #fff
+    padding: 20px
+    display: flex
+    align-items: center
+    &:hover
+      background-color: lighten(rgb(14, 26, 53), 10)
+      border-left: 5px solid #5584ff
+  &__svg
+    margin-right: 10px
+.main__content
+  flex-basis: 100%
+  border-right: 1px solid black
 .header
   display: flex
+  padding: 20px
+  justify-content: space-between
   &__button
     background-color: #fff
     border: none
@@ -7,6 +48,7 @@
     flex-direction: column
     align-items: center
     justify-content: center
+    outline: none
     &:hover .hover-item
       background-color: rgb(85, 132, 255)
 .burger-btn
@@ -40,6 +82,7 @@
   height: 29px
   flex-direction: row
   flex-wrap: wrap
+  background-color: darken(#fff, 5)
   &__item
     display: block
     width: 8px
@@ -52,6 +95,7 @@
   border: none
   border-radius: 50px
   background-color: rgb(85, 132, 255)
+  outline: none
   &:hover
     background-color: darken(rgb(85, 132, 255), 10)
   &__text
@@ -60,6 +104,7 @@
 .edit-btn
   border: none
   background-color: #fff
+  margin-left: 20px
   &:hover &__item
     background-color: black
   &__item
@@ -69,3 +114,60 @@
     height: 3px
     border-radius: 5px
     background-color: gray
+.group-btn
+  display: flex
+.main__tasks
+  background-color: darken(#fff, 5)
+  display: flex
+  flex-direction: column
+  align-items: center
+.main__tasks_block
+  background-color: darken(#fff, 5)
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+.tasks__block
+  width: 90%
+  border: 1px solid darken(#fff, 10)
+  display: flex
+  background-color: #fff
+  padding: 20px
+  margin: 10px 0px
+  flex-wrap: wrap
+.tasks__block_block
+  width: 90%
+  border: 1px solid darken(#fff, 10)
+  display: flex
+  background-color: #fff
+  padding: 20px
+  margin: 10px 0px
+  flex-wrap: wrap
+.tasks__view
+  width: 90%
+  display: none
+  justify-content: space-between
+  align-items: center
+  margin-top: 20px
+.view
+  &__btn
+    display: flex
+  &__quantity
+    font-size: 30px
+.task
+  &-info
+   flex-basis: 100%
+   display: flex
+   justify-content: flex-end
+   &__priority
+     display: inline-block
+     font-weight: bold
+   &__date
+     display: inline-block
+  &__content
+    width: 95%
+    display: flex
+  &__circle
+    flex-basis: 50%
+  &__title
+    margin: 0

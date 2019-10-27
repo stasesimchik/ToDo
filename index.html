@@ -5,12 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=cyrillic" rel="stylesheet">
   <title>ToDo</title>
 </head>
 <body>
   <main class="main">
-    <aside class="main__sidebar sidebar">
-
+    <aside id="sidebar" class="main__sidebar sidebar">
+      <div class="sidebar__header">
+        <span class="sidebar__title">ToDo</span>
+      </div>
+      <div class="sidebar__menu menu-sidebar">
+        <ul class="menu-sidebar__list">
+          <li class="menu-sidebar__item">
+            <svg class="menu-sidebar__svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#5584ff"><path d="M86,13.94141l-3.86328,3.69531l-69.875,69.875l7.72656,7.72656l6.88672,-6.88672v62.14844h48.375v-53.75h21.5v53.75h48.375v-62.14844l6.88672,6.88672l7.72656,-7.72656l-69.875,-69.875zM86,29.22656l48.375,48.375v62.14844h-26.875v-53.75h-43v53.75h-26.875v-62.14844z"></path></g></g></svg>
+            Home</li>
+          <!-- /.menu-sidebar__item -->
+          <li class="menu-sidebar__item">
+            <svg class="menu-sidebar__svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#5584ff"><path d="M69.27311,14.33333l-3.51335,18.08464c-5.90653,2.22752 -11.33046,5.34987 -16.08301,9.25228l-17.37077,-5.99089l-16.74089,28.97461l13.91341,12.09375c-0.53487,3.28395 -0.81185,6.32717 -0.81185,9.25228c0,2.9295 0.28528,5.96715 0.81185,9.25228v0.014l-13.91341,12.09375l16.74089,28.96061l17.35677,-5.97689c4.75299,3.90454 10.18919,7.00948 16.097,9.23828l3.51335,18.08464h33.45377l3.51335,-18.08464c5.91039,-2.22897 11.32824,-5.34628 16.083,-9.25227l17.37077,5.99088l16.72689,-28.96061l-13.89941,-12.10775c0.53486,-3.28395 0.81185,-6.32717 0.81185,-9.25228c0,-2.92072 -0.27857,-5.95999 -0.81185,-9.23828v-0.014l13.91341,-12.10775l-16.74088,-28.96061l-17.35678,5.97689c-4.75298,-3.90453 -10.18919,-7.00948 -16.097,-9.23828l-3.51335,-18.08464zM81.08691,28.66667h9.82617l2.78548,14.33333l7.47461,2.82747c4.50543,1.69806 8.5533,4.02927 12.06575,6.91471l6.18685,5.06706l13.77344,-4.73112l4.91308,8.49642l-11.00195,9.57422l1.25976,7.88054v0.014c0.43823,2.68706 0.62989,4.94121 0.62989,6.9567c0,2.0155 -0.19164,4.26931 -0.62989,6.9567l-1.27376,7.88053l11.00195,9.57422l-4.91309,8.51042l-13.75944,-4.74511l-6.20084,5.08105c-3.51245,2.88544 -7.54633,5.21665 -12.05175,6.91472h-0.014l-7.4746,2.82747l-2.78548,14.33333h-9.81218l-2.78548,-14.33333l-7.47461,-2.82747c-4.50544,-1.69806 -8.5533,-4.02927 -12.06575,-6.91472l-6.18685,-5.06706l-13.77344,4.73112l-4.91309,-8.49642l11.01595,-9.58822l-1.27376,-7.85254v-0.014c-0.43195,-2.69874 -0.62988,-4.95921 -0.62988,-6.9707c0,-2.0155 0.19165,-4.26931 0.62988,-6.9567l1.27376,-7.88053l-11.01595,-9.57422l4.91309,-8.51042l13.77344,4.74512l6.18685,-5.08105c3.51245,-2.88545 7.56032,-5.21665 12.06575,-6.91471l7.47461,-2.82747zM86,57.33333c-15.74175,0 -28.66667,12.92492 -28.66667,28.66667c0,15.74175 12.92492,28.66667 28.66667,28.66667c15.74175,0 28.66667,-12.92492 28.66667,-28.66667c0,-15.74175 -12.92492,-28.66667 -28.66667,-28.66667zM86,71.66667c7.96559,0 14.33333,6.36775 14.33333,14.33333c0,7.96559 -6.36775,14.33333 -14.33333,14.33333c-7.96559,0 -14.33333,-6.36775 -14.33333,-14.33333c0,-7.96559 6.36775,-14.33333 14.33333,-14.33333z"></path></g></g></svg>
+            Settings</li>
+          <!-- /.menu-sidebar__item -->
+        </ul>
+        <!-- /.menu-sidebar__list -->
+      </div>
+      <!-- /.sidebar__menu menu-sidebar -->
+      <!-- /.sidebar__header -->
     </aside>
     <!-- /.main__sidebar sidebar -->
     <section class="main__content content">
@@ -42,6 +66,33 @@
       <!-- /.content__header header -->
 
     <section class="main__tasks tasks">
+      <div class="tasks__view view">
+        <span class="view__quantity">To Do (<span id='quantity'></span>) </span>
+        <div class="view__btn">
+          <button class="header__button view-btn block-view">
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+          </button>
+
+          <button class="header__button view-btn inline-view">
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item view-btn__item_long hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item view-btn__item_long hover-item"></span>
+            <span class="view-btn__item hover-item"></span>
+            <span class="view-btn__item view-btn__item_long hover-item"></span>
+          </button>
+        </div>
+        <!-- /.view_btn -->
+      </div>
+      <!-- /.tasks__view view -->
       <div class="tasks__block task">
         <div class="task__info task-info">
           <span class="task-info__priority">High priority</span>
@@ -50,7 +101,7 @@
         <!-- /.task__info task-info -->
         <div class="task__content">
           <svg class="task__circle" width=72 height=72 xmlns='http://www.w3.org/2000/svg'>
-            <circle cx=35 cy=40 r=30 fill=blue />
+            <circle cx=30 cy=30 r=30 fill=#5584ff />
           </svg>
           <div class="task__description">
             <h4 class="task__title">Lorem ipsum</h4>
@@ -72,26 +123,7 @@
     <!-- /.main__tasks tasks -->
 
 
-      <button class="header__button view-btn">
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-      </button>
 
-      <button class="header__button view-btn">
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item view-btn__item_long hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item view-btn__item_long hover-item"></span>
-        <span class="view-btn__item hover-item"></span>
-        <span class="view-btn__item view-btn__item_long hover-item"></span>
-      </button>
 
 
 
@@ -101,6 +133,6 @@
   </main>
   <!-- /.main -->
 
-
+<script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
