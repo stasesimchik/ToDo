@@ -21,7 +21,6 @@ document.querySelector('.burger-btn').onclick = function(){
 
 let countTask = function(){
   let quantityTask = document.querySelectorAll('.tasks__block')
-  console.log(quantityTask.length)
   let quantity = document.getElementById('quantity');
   quantity.innerHTML = quantityTask.length;
 }
@@ -98,7 +97,20 @@ document.querySelector('.block-view').onclick = function(){
   document.querySelector('.main__tasks').classList.add('main__tasks_block')
   let countTasks = document.querySelectorAll('.tasks__block');
   for(let i=0; i < countTasks.length; i++){
-    document.countTasks[i].classList.add('tasks__block_block')
+    let item = countTasks[i];
+    item.classList.add('tasks__block_block')
+    if(countTasks.length > 6){
+      item.style.flexBasis = 30 + '%';
+    }}
+
+}
+
+document.querySelector('.inline-view').onclick = function(){
+  document.querySelector('.main__tasks').classList.remove('main__tasks_block')
+  let countTasks = document.querySelectorAll('.tasks__block');
+  for(let i=0; i < countTasks.length; i++){
+    let item = countTasks[i];
+    item.classList.remove('tasks__block_block')
   }
 
 }
