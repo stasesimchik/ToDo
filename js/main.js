@@ -1,14 +1,3 @@
-// document.querySelector('.burger-btn').onclick = function(){
-//   var display = document.querySelector('.main__sidebar').style.flexBasis;
-//   if(display == 20+'%'){
-//     document.querySelector('.main__sidebar').style.flexBasis = 0+'%';
-//     document.querySelector('.main__content').style.flexBasis = 100+'%';
-//   }else{
-//     document.querySelector('.main__sidebar').style.flexBasis = 20+'%';
-//     document.querySelector('.main__content').style.flexBasis = 80+'%';
-//   }
-// };
-
 document.querySelector('.burger-btn').onclick = function(){
   let display = document.querySelector('.main__sidebar').style.display;
   if(display == 'none'){
@@ -31,6 +20,18 @@ let showTasksView = function(){
 
 document.querySelector('.task-add').onclick = function(){
   showTasksView();
+  //modal
+  let form = document.forms.form;
+
+  let title = form.elements.title;
+  let titleValue = title.value;
+
+  let description = form.elements.description;
+  let descriptionValue = description.value;
+
+  let radio = form.elements.radio;
+  let radioValue = radio.value;
+  //new task
   let newTask = document.createElement('div');
   newTask.classList.add('tasks__block');
   newTask.classList.add('task');
@@ -38,16 +39,19 @@ document.querySelector('.task-add').onclick = function(){
   mainTasks.appendChild(newTask);
   //task__info
   let taskInfo = document.createElement('div');
-  taskInfo.classList.add('tasks__info');
-  taskInfo.classList.add('tasks-info');
+  taskInfo.classList.add('task__info');
+  taskInfo.classList.add('task-info');
   newTask.appendChild(taskInfo);
 
   let taskInfoSpanPriority = document.createElement('span');
+  if(radio.value == 1){
+    taskInfoSpanPriority.innerHTML = 'High priority';
+  }else{taskInfoSpanPriority.innerHTML = 'Low priority';}
   taskInfoSpanPriority.classList.add('task-info__priority');
-  // let priority = prompt('Приоритет?');
-  // taskInfoSpanPriority.innerHTML = priority;
   taskInfo.appendChild(taskInfoSpanPriority);
   let taskInfoSpanDate = document.createElement('span');
+  let date = new Date();
+  taskInfoSpanDate.innerHTML = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ' ' + date.toLocaleTimeString();
   taskInfoSpanDate.classList.add('task-info__date');
   taskInfo.appendChild(taskInfoSpanDate);
 
@@ -68,6 +72,16 @@ document.querySelector('.task-add').onclick = function(){
   taskContentSvgCircle.setAttribute("cx",30);
   taskContentSvgCircle.setAttribute("cy",30);
   taskContentSvg.appendChild(taskContentSvgCircle);
+
+  var txt = document.createElementNS("http://www.w3.org/2000/svg",'text');
+  txt.setAttribute("x",30);
+  txt.setAttribute("y",35);
+  txt.style.fill="white";
+  txt.setAttribute('text-anchor','middle');
+  txt.setAttribute('font-size',20)
+  txt.textContent= titleValue.charAt(0).toUpperCase();
+  taskContentSvg.appendChild(txt);
+  
   //description
   let taskDescription = document.createElement('div');
   taskDescription.classList.add('task__description');
@@ -75,8 +89,10 @@ document.querySelector('.task-add').onclick = function(){
 
   let taskTitle = document.createElement('h4');
   taskTitle.classList.add('task__title');
+  taskTitle.innerHTML = titleValue;
   taskDescription.appendChild(taskTitle);
   let taskText = document.createElement('p');
+  taskText.innerHTML = description.value;
   taskText.classList.add('task__text');
   taskDescription.appendChild(taskText);
 

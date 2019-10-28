@@ -72,22 +72,22 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
               </button>
             </div>
             <div class="modal-body">
-              <form action="" class="settings">
+              <form action="" class="settings" name='form'>
                 <label for="">Title</label>
-                <input type="text" name="settings__title" value="">
+                <input type="text" name="title" value="">
                 <label for="">Description</label>
-                <textarea name="settings__description" class="settings__description" rows="8" cols="80"></textarea>
+                <textarea name="description" class="settings__description" rows="8" cols="80"></textarea>
                 <label for="">Priority</label>
-                <span class="checkbox-description"><input type="checkbox" name="settings__checkbox-high" value="">High </span>
+                <span class="checkbox-description"><input type="radio" name="radio" value="1">High </span>
 
-                <span class="checkbox-description"><input type="checkbox" name="settings__checkbox-low" value="">Low</span>
+                <span class="checkbox-description"><input type="radio" name="radio" value="2">Low</span>
 
               </form>
               <!-- /.settings -->
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary task-add" data-dismiss="modal">Save changes</button>
+              <button type="button" class="btn btn-primary task-add" data-dismiss="modal">Create task</button>
             </div>
           </div>
         </div>
@@ -123,31 +123,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         <!-- /.view_btn -->
       </div>
       <!-- /.tasks__view view -->
-      <div class="tasks__block task">
-        <div class="task__info task-info">
-          <span class="task-info__priority">High priority</span>
-          <span class="task-info__date"></span>
-        </div>
-        <!-- /.task__info task-info -->
-        <div class="task__content">
-          <svg class="task__circle" width=72 height=72 xmlns='http://www.w3.org/2000/svg'>
-            <circle cx=30 cy=30 r=30 fill=#5584ff />
-          </svg>
-          <div class="task__description">
-            <h4 class="task__title">Lorem ipsum</h4>
-            <!-- /.task__title -->
-            <p class="task__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <!-- /.task__text -->
-          </div>
-          <!-- /.task__description -->
-        </div>
-        <!-- /.task__content -->
-        <button class="edit-btn">
-          <span class="edit-btn__item"></span>
-          <span class="edit-btn__item"></span>
-          <span class="edit-btn__item"></span>
-        </button>
-      </div>
+      
       <!-- /.tasks__block -->
     </section>
     <!-- /.main__tasks tasks -->
