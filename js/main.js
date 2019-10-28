@@ -29,7 +29,7 @@ let showTasksView = function(){
   document.querySelector('.tasks__view').style.display = 'flex';
 }
 
-document.querySelector('.add-btn__text').onclick = function(){
+document.querySelector('.task-add').onclick = function(){
   showTasksView();
   let newTask = document.createElement('div');
   newTask.classList.add('tasks__block');
